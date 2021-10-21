@@ -11,81 +11,74 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class Annotations {
-	//   sTarting with @Before ----  Pre conditions annotations
 	
 	@BeforeSuite
 	
 	public void setup() {
-		System.out.println("Set Up system properties");
+		System.out.println("@BeforeSuite");
 	}
 	
-	@BeforeTest // 2	
+	@BeforeTest	
 	
 	public void launcher() {
-		System.out.println("Launch Chrome Browser");
+		System.out.println("@BeforeTest");
 	}
 	
 	
 	@BeforeClass
 	public void login()
 	{
-		System.out.println("Login on app");
+		System.out.println("@BeforeClass");
 	}
 	
 	@BeforeMethod
 	public void enterURl() {
-		System.out.println("Enter URL");	
+		System.out.println("@BeforeMethod");	
 	}
 	
 
-	
-	//  Test case @ Test
 	@Test
 	public void googleTitle()
 	{
-		System.out.println("Google Title Test");
+		System.out.println("@Test1");
 	}
 	
 	@Test
 	public void seactchTest() {
-		System.out.println("Search here");
+		System.out.println("@Test2");
 	}
 	
 	@Test
 	public void googleLogo()
 	{
-		System.out.println("Google Logo");
+		System.out.println("@Test3");
 	}
 
-	
-	
-	// @after - --- Post conditions 
 	
 	@AfterMethod
 	public void logOut()
 	{
-		System.out.println("Logout from Chrome Browser");
+		System.out.println("@AfterMethod");
 	}
 	
 
 	@AfterClass
 	public void close()
 	{
-		System.out.println("CLose Chrome Browser");
+		System.out.println("@AfterClass");
 	}
 	
 	@AfterTest
 	public void delete()
 	{
-		System.out.println("Dlete all Cookies");
+		System.out.println("@AfterTest");
 	}
-	
 	
 	
 	@AfterSuite
 	public void generateTestReport()
 	{
-		System.out.println("Generate Test Report");
+		System.out.println("@AfterSuite");
 	}
 	
 }
